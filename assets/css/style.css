@@ -1,0 +1,185 @@
+/* ============================================================
+   STYLES GLOBAUX - PONT HKB
+   ============================================================ */
+
+:root {
+    --couleur-primaire: #1a3c5e;
+    --couleur-secondaire: #f0a500;
+    --couleur-fond: #f4f6f9;
+}
+
+body {
+    background-color: var(--couleur-fond);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---- PAGE DE CONNEXION ---- */
+.carte-connexion {
+    max-width: 450px;
+    margin: 80px auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    border: none;
+}
+
+.entete-connexion {
+    background: linear-gradient(135deg, var(--couleur-primaire), #2d6a9f);
+    color: white;
+    border-radius: 16px 16px 0 0;
+    padding: 30px;
+    text-align: center;
+}
+
+.entete-connexion h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.entete-connexion p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.logo-pont {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* ---- NAVBAR ---- */
+.navbar-pont {
+    background: linear-gradient(135deg, var(--couleur-primaire), #2d6a9f);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.navbar-pont .navbar-brand {
+    color: white !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.navbar-pont .nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    transition: color 0.2s;
+}
+
+.navbar-pont .nav-link:hover,
+.navbar-pont .nav-link.active {
+    color: var(--couleur-secondaire) !important;
+}
+
+/* ---- CARTES TABLEAU DE BORD ---- */
+.carte-stat {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.carte-stat:hover {
+    transform: translateY(-3px);
+}
+
+.carte-stat .icone {
+    font-size: 2.5rem;
+    opacity: 0.85;
+}
+
+/* ---- TITRES DE PAGE ---- */
+.titre-page {
+    color: var(--couleur-primaire);
+    font-weight: 700;
+    border-left: 4px solid var(--couleur-secondaire);
+    padding-left: 12px;
+    margin-bottom: 25px;
+}
+
+/* ---- TABLEAUX ---- */
+.table thead {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(26, 60, 94, 0.05);
+}
+
+/* ---- BOUTONS ---- */
+.btn-pont {
+    background-color: var(--couleur-primaire);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-pont:hover {
+    background-color: #2d6a9f;
+    color: white;
+}
+
+/* ---- SIDEBAR ---- */
+.sidebar {
+    min-height: 100vh;
+    background: var(--couleur-primaire);
+    color: white;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 100;
+    transition: width 0.3s;
+}
+
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.8);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 2px 10px;
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(255,255,255,0.15);
+    color: var(--couleur-secondaire);
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.contenu-principal {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar-titre {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+.sidebar-titre h5 {
+    color: var(--couleur-secondaire);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        position: relative;
+    }
+    .contenu-principal {
+        margin-left: 0;
+    }
+}
